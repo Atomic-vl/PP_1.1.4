@@ -15,7 +15,7 @@ public class Util {
     private static final String USER = "root";
     private static final String PASSWORD = "zxtcnysq";
     private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
-    private static SessionFactory sessionFactory = null;
+    private static SessionFactory sessionFactory;
 
     public static SessionFactory getSessionFactory() {
 
@@ -29,7 +29,7 @@ public class Util {
                 properties.put(Environment.USER, USER);
                 properties.put(Environment.PASS, PASSWORD);
                 properties.put(Environment.DRIVER, DRIVER);
-                properties.put(AvailableSettings.DIALECT, "org.hibernate.dialect.MySQL5Dialect");
+                properties.put(AvailableSettings.DIALECT, "org.hibernate.dialect.MySQLDialect");
                 properties.put(AvailableSettings.CURRENT_SESSION_CONTEXT_CLASS, "thread");
                 properties.put(AvailableSettings.SHOW_SQL, "true");
 
